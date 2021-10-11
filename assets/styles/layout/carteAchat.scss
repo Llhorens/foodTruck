@@ -1,0 +1,137 @@
+.menu-container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.menu img{
+    width: 100%;
+    display: block;
+}
+.menu-head{
+    text-align: center;
+    color: black;
+    
+}
+.menu-head h2{
+    font-family: var(--Kaushan);
+    font-size: 4rem;
+}
+.menu-head p{
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 1.8rem 0;
+}
+.menu-btns{
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.menu-btn{
+    font-family: var(--Inter);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: red;
+    display: block;
+    margin: 0 1rem;
+    cursor: pointer;
+    outline: 0;
+    transition: opacity 0.4s ease-out;
+}
+.menu-btn::after{
+    content: "";
+    display: block;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background: green;
+    margin-top: 0.5rem;
+    width: 0;
+    transition: width 0.4s ease-out;
+}
+.menu-btn:hover::after{
+    width: 100%;
+}
+.menu-btn:hover{
+    opacity: 0.8;
+}
+.active-btn{
+    color: green;
+   
+       
+}
+.food-items{
+    margin: 2rem 0;
+    padding-bottom: 5%;
+}
+.food-item{
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    margin: 0.6rem 0;
+    box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    animation: fadeIn 2s;
+}
+.food-item .btn{
+  position: relative;
+  float: right;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.food-img img{
+    border-radius: 4px;
+}
+.food-content{
+    padding: 1rem;
+}
+.food-name{
+    font-family: var(--Inter);
+    color: red;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.line{
+    width: 100px;
+    height: 3px;
+    background: red;
+}
+.food-price{
+    padding: 0.4rem 0;
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+.rating{
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+}
+.rating .fa-star{
+    margin-right: 0.4rem;
+    color: #5f10d4;
+}
+.category{
+    padding-top: 0.2rem;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--Inter);
+}
+.category span{
+    font-weight: 500;
+}

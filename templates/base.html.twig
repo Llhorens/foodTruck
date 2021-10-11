@@ -2,18 +2,56 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Food Truck{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+        
     </head>
     <body>
+        <header>
+
+            <a href="#" class="logo"><i class="fas fa-utensils"></i>food</a>
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="{{ path('home') }}">accueil</a>
+                <a href="#speciality">specialités</a>
+                <a href="#popular">populaire</a>
+                <a href="#card_menu">notre carte</a>
+                <a href="#gallery">galerie</a>
+                <a href="#review">avis</a>
+                <a class="cart" href="{{ path('cart') }}"><ion-icon name="basket"></ion-icon>panier <span>0</span></a>       
+                <a class="login" href=""><img src="{{ asset('build/images/login.png') }}" alt="login"></a>
+                <a class="register" href=""><img src="{{ asset('build/images/register.png') }}" alt="register"></a>
+            </nav>
+        </header>
+
+<!-- header section ends et navbar end aussi ahah -->
+
         {% block body %}{% endblock %}
+
+        <!-- footer section  -->
+
+        <section class="footer">
+
+            <div class="share">
+                <a href="#" class="btn">facebook</a>
+                <a href="#" class="btn">twitter</a>
+                <a href="#" class="btn">linkedin</a>
+            </div>
+
+            <h1 class="credit"> © copyright <span> Bigey, Colez, Lhorens </span> | tout droit reservé </h1>
+
+        </section>
     </body>
+            {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% endblock %}
 </html>
