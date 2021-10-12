@@ -1,0 +1,68 @@
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#fff;
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(247, 4, 4, 0.144);
+  }
+  
+  header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:#666;
+  }
+  
+  header .logo i{
+    padding-right: .5rem;
+    color:var(--red);
+  }
+  
+  header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color:#666;
+  }
+  
+  header .navbar a:hover{
+    color:var(--red);
+  }
+  
+  .cart ion-icon{
+    vertical-align:middle;
+    font-size: 22px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+  }
+  ion-icon {
+    color: white;
+    
+  }
+  .navbar .cart{
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+  }
+  .login p, .register p{
+    display: none;
+  }
+  .login{
+    padding-left: 40px;
+  }
+  .login img, .register img{
+    height: 30px;
+    width: 30px;
+    align-items: center;
+  }
+  #menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color:#666;
+    border:.1rem solid #666;
+    border-radius: .3rem;
+    padding:.5rem 1.5rem;
+    display: none;
+  }

@@ -1,0 +1,14 @@
+@media screen and (max-width: 480px) {
+    .products img{
+      display: none;
+    }
+    .prix_panier_titre{
+      width: 30%;
+    }
+    .products-container{
+      margin-top: 20%;
+    }
+    .total{
+      width: 20%;
+    }
+  }
