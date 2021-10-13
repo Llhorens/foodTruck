@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 .env
 .env.test
 
+=======
+>>>>>>> 4dd8c0ee78fb7412187992221e62188716d8d708
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
