@@ -1,0 +1,41 @@
+.formulaire {
+    border: solid 2px lightgray;
+    border-radius: 10px;
+    padding-bottom: 5%;
+    margin-bottom: 10%;
+   
+
+}
+
+input#registration_form_email, input#registration_form_plainPassword_first, 
+input#registration_form_plainPassword_second {
+    margin-left: 10px;
+    font-size: 2rem;
+    background-color: lightgray;
+    
+
+}
+
+.register_form{
+   padding-top: 100px;
+    margin-top:5%;
+    
+    text-align:center;
+}
+
+.form{
+    font-size: 2.5rem;
+    width: 60%;
+    margin: 0 auto;
+    
+}
+
+.title_Register{
+    padding-top: 5%;
+    margin-bottom: 3%;
+}
+
+.button_register{
+    margin-top: 5%;
+}
+

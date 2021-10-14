@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Profils' %}
+
+{% block body %}
+
+<section class="page_profils">
+    <div class="border">
+                <div class="profil_title">
+                    <h1 class="heading">Mon profil</h1>
+                </div>
+            <div class="profils"> 
+                <div class="img_profils">
+                    <div><img src="{{ asset('build/images/avatar.png') }}" alt=""></div>
+                   <div class="heading un"><span>{{ app.user.username }}</span></div>
+                   <div class="heading un">Vous avez :<span>{{ app.user.token }}</span> pts</div>
+                </div>
+                
+                <div class="profils_name">
+                    <h3 class="heading">Bonjour,</h3>
+                    <div class="mb-3 heading">
+                                You are logged in as
+                                <span>{{ app.user.username }}</span>,
+                                <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+                    <div class="commande">
+                    <h3 class="heading">Mes commandes:</h3>
+                        <ul class="liste_commande">
+                            <li>exemple 1</li>
+                            <li>exemple 2</li>
+                    </div>
+                </div>
+            </div>
+    </div>        
+</section>
+{% endblock %}

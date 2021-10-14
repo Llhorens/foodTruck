@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Profils' %}
+
+{% block body %}
+
+	<section class="page_profils">
+		<div class="border">
+			<div class="profil_title">
+				<h1 class="heading">God MOD</h1>
+			</div>
+			<div class="profils">
+				{% if (app.user)%}
+					<div class="img_profils">
+						<div><img src="{{ asset('build/images/avatar.png') }}" alt=""></div>
+						<div class="heading un">
+							<span>{{ app.user.username }}</span>
+						</div>
+						<div class="heading un">Vous avez :<span>{{ app.user.token }}</span>
+							pts</div>
+					</div>
+				{% endif %}
+				<div class="profils_name">
+					<h3 class="heading">Bonjour,</h3>
+					<div class="mb-3 heading">
+						Salut !
+						<span>{{ app.user.username }}</span>,
+																																																	                                tu es connecté en tant qu'admin sale plow !
+						<a href="{{ path('app_logout') }}">Logout</a>
+					</div>
+					<div class="les_trois_boutons">
+						<div class="gerer_produits">
+							<a class="btn" href="{{ path('admin_manage_product') }}">Gérer produits</a>
+						</div>
+						<div class="gerer_categories">
+							<a class="btn" href="{{ path('admin_manage_category') }}">gérer catégories</a>
+						</div>
+						<div class="dernieres_commandes">
+							<a class="btn" href="{{ path('admin_manage_product') }}">dernières commandes</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
