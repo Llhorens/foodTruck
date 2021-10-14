@@ -42,7 +42,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $token;
 
-
     public function getId(): ?int
     {
         return $this->id;

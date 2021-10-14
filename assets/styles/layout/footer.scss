@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+
 
 .footer {
   background: #000;
   text-align: center;
-  width: 100%;
-  bottom: 0;
 }
 
 .footer .share {
@@ -24,31 +22,3 @@
 .footer .credit span {
   color: var(--red);
 }
-=======
-.footer{
-    background:#000;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-  
-  .footer .share{
-    display: flex;
-    gap:1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .footer .credit{
-    padding:2.5rem 1rem;
-    color:#fff;
-    font-weight: normal;
-    font-size: 2rem;
-  }
-  
-  .footer .credit span{
-    color:var(--red);
-  }
-  
->>>>>>> a0ad1afc4ec635bb8fe0e6bfd24510a545365437

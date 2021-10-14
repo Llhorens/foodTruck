@@ -58,7 +58,7 @@
 
 /* media carte d'achat */
 
-  @media screen and (min-width: 600px){
+  @media all and (min-width: 600px){
     .food-item{
         display: grid;
         grid-template-columns: 25% auto;
@@ -71,7 +71,7 @@
     }
 }
 
-@media screen and (min-width: 768px){
+@media all and (min-width: 768px){
     .menu-head p{
         width: 70%;
         margin-left: auto;
@@ -80,7 +80,7 @@
     
 }
 
-@media screen and (min-width: 991px){
+@media all and (min-width: 991px){
     .menu-head p{
         width: 50%;
     }
