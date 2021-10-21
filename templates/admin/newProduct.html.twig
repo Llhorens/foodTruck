@@ -1,12 +1,13 @@
 {% extends "base.html.twig" %}
-{% block title 'category' %}
+{% block title 'editProduct' %}
 
 {% block body %}
 	<section class="page_profils">
 		<div class="border">
 			<div class="profil_title">
-				<h1 class="heading">Gérer les catégories :</h1>
+				<h1 class="heading">Créer un produit :</h1>
 			</div>
+			{{ include( 'admin/_form.html.twig', {form: form, button : 'Créer'}) }}
 		</diV>
 	</section>
 {% endblock %}
