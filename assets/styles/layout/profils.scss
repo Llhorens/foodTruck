@@ -1,5 +1,5 @@
 .page_profils{
-    margin-top: 10%;
+    margin-top: 15vh;
 }
 .profils{
     display: flex;
@@ -24,10 +24,7 @@
 }
 .profils_name{
     width: 70%;
-    text-align: center;
-    background-image: url(../../images/homer.gif);
-    background-repeat: no-repeat;
-    
+    text-align: center; 
 }
 .profils_name .heading{
     font-size: 2rem;
@@ -49,4 +46,5 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 15%;
+    flex-wrap: wrap;
 }
