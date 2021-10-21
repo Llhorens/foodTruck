@@ -2,7 +2,38 @@
 {% block title 'product' %}
 
 {% block body %}
-	<div>
-		<h5>Gérer les produits :</h5>
-	</div>
+	<section class="page_profils">
+		<div class="border">
+			<div class="profil_title">
+				<h1 class="heading">Gérer les produits :</h1>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Produit</th>
+						<th>Prix</th>
+						<th>Categorie</th>
+						<th>Ingrédients</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for product in products %}
+						<tr>
+							<td>{{ product.name }}</td>
+							<td>{{ product.price }}</td>
+							<td>{{ product.category }}</td>
+							<td>{{ product.ingredient }}</td>
+							<td>
+								<a href="{{ path('admin_edit_product', {id: product.id}) }}" class="btn">Editer</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<div class="text-right">
+				<a href="{{ path('admin_new_product') }}" class="btn">Créer un produit</a>
+			</div>
+		</diV>
+	</section>
 {% endblock %}
