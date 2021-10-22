@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
@@ -23,14 +24,15 @@ class Product
 
     /**
      * @var string|null
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $filename;
 
     /**
+     * @var File|null
      * @Vich\UploadableField(mapping="property_image", fileNameProperty="filename")
      */
-    private $imagefile;
+    private $imageFile;
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -45,11 +47,6 @@ class Product
      * @ORM\Column(type="integer")
      */
     private $category;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $picture;
 
     /**
      * @ORM\Column(type="text")
@@ -97,18 +94,6 @@ class Product
         return $this;
     }
 
-    public function getPicture(): ?string
-    {
-        return $this->picture;
-    }
-
-    public function setPicture(string $picture): self
-    {
-        $this->picture = $picture;
-
-        return $this;
-    }
-
     public function getIngredient(): ?string
     {
         return $this->ingredient;
@@ -126,10 +111,28 @@ class Product
         return $this->filename;
     }
 
-    public function setFilename(string $filename): self
+    public function setFilename(?string $filename): Product
     {
         $this->filename = $filename;
 
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|null $imageFile
+     * @return Product
+     */
+    public function setImageFile(?File $imageFile): Product
+    {
+        $this->imageFile = $imageFile;
         return $this;
     }
 }
