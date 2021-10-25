@@ -46,7 +46,7 @@ class ManageCategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->persist($category);
             $this->em->flush();
-            return $this->redirectToRoute('admin_manage_Category');
+            return $this->redirectToRoute('admin_manage_category');
         }
 
         return $this->render('admin/newCategory.html.twig', [
