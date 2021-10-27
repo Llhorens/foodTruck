@@ -7,12 +7,8 @@
 			{% block title %}Food Truck
 			{% endblock %}
 		</title>
-<<<<<<< HEAD
-		{# Run `composer require symfony/webpack-encore-bundle`
-																																																																           and uncomment the following Encore helpers to start using Symfony UX #}
-=======
 		{# Run `composer require symfony/webpack-encore-bundle` and uncomment the following Encore helpers to start using Symfony UX #}
->>>>>>> c650560af5d9159e3753b118b5587a0ea8658c97
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -24,21 +20,15 @@
 	</head>
 	<body>
 		<header>
-<<<<<<< HEAD
-
-			<a href="#" class="logo">
-				<i class="fas fa-utensils"></i>Food</a>
-=======
 			<a href="{{ path('home') }}" class="logo">
 				<i class="fas fa-utensils"></i>food</a>
->>>>>>> c650560af5d9159e3753b118b5587a0ea8658c97
 			<div id="menu-bar" class="fas fa-bars"></div>
 
 			<nav class="navbar">
 				<a href="{{ path('home') }}">Accueil</a>
 				<a href="#speciality">Specialités</a>
 				<a href="#popular">Populaire</a>
-				<a href="#card_menu">Notre carte</a>
+				<a href="#card_menu">La carte</a>
 				<a href="#gallery">Galerie</a>
 				<a href="#review">Avis</a>
 				<a class="cart" href="{{ path('cart') }}">
@@ -52,13 +42,8 @@
 					{% if is_granted('ROLE_ADMIN') %}
 						<a class="login" href="{{ path('admin_profile') }}">Admin</a>
 					{% endif %}
-<<<<<<< HEAD
-					<a class="register" href="{{ path('app_logout') }}" id="bouton">Deconnexion</a>
-					<audio id="son2" src="{{ asset('build/images/son/gay.mp3') }}"></audio>
-=======
 					<a class="register" href="{{ path('app_logout') }}">Deconnexion</a>
 
->>>>>>> c650560af5d9159e3753b118b5587a0ea8658c97
 				{% else %}
 					<a class="login" href="{{ path('app_login') }}">Connexion</a>
 					<a class="register" href="{{ path('app_register') }}">S'enregistrer</a>
@@ -75,7 +60,7 @@
 		<!-- footer section  -->
 
 		<section class="footer">
-	
+
 			<div class="share">
 				<a href="https://www.facebook.com" class="btn">Facebook</a>
 				<a href="https://twitter.com" class="btn">Twitter</a>
@@ -87,11 +72,7 @@
 				<span>
 					Bigey, Colez, Lhorens
 				</span>
-<<<<<<< HEAD
-				| Tout droits reservé
-=======
 				| Tout droits reservés
->>>>>>> c650560af5d9159e3753b118b5587a0ea8658c97
 			</h1>
 
 		</section>
@@ -99,8 +80,4 @@
 	{% block javascripts %}
 		{{ encore_entry_script_tags('app') }}
 	{% endblock %}
-<<<<<<< HEAD
-	
-=======
->>>>>>> c650560af5d9159e3753b118b5587a0ea8658c97
 </html>

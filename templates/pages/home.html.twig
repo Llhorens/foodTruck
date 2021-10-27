@@ -12,7 +12,7 @@
 		<div class="content">
 			<h3>Cuisine faite avec amour et passion!</h3>
 			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas accusamus tempore temporibus rem amet laudantium animi optio voluptatum. Natus obcaecati unde porro nostrum ipsam itaque impedit incidunt rem quisquam eos!</p>
-			<a href="#card_menu" class="btn">commander</a>
+			<a href="#card_menu" class="btn">Commander</a>
 		</div>
 
 		<div class="image">
@@ -28,7 +28,7 @@
 	<section class="speciality" id="speciality">
 
 		<h1 class="heading">
-			nos
+			Nos
 			<span>specialités</span>
 		</h1>
 
@@ -70,7 +70,7 @@
 				<img class="image" src="{{ asset('build/images/boisson-CF.png') }}" alt="">
 				<div class="content">
 					<img src="{{ asset('build/images/s-6.png') }}" alt=""><img src="{{ asset('build/images/s-4.png') }}" alt="">
-					<h3>boisson chaude et boisson froide</h3>
+					<h3>Boisson chaude et Boisson froide</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut.</p>
 				</div>
 			</div>
@@ -90,1482 +90,1281 @@
 			<span>populaire</span>
 		</h1>
 
-		<div class="box-container">
+		{% for product in products %}
 
-			<div class="box">
-				<span class="price">
-					7€</span>
-				<img src="{{ asset('build/images/burger/doublecheeseburger.jpg') }}" alt="">
-				<h3>Double cheese burger</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
+			<div class="box-container">
+
+				<div class="box">
+					<span class="price">
+						{{product.price}}€</span>
+					{# <img src="{{ product.filename }}" alt=""> #}
+					<h3>{{product.name}}</h3>
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
 				</div>
+				{% endfor %}
 
-			</div>
-			<div class="box">
-				<span class="price">
-					9€</span>
-				<img src="{{ asset('build/images/pizza/savoyarde.jpg') }}" alt="">
-				<h3>Savoyarde</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
+			</section>
+
+			<!-- popular section ends -->
+
+			<!-- section carte achat start -->
+
+			<section class="menu" id="card_menu">
+				<div class="menu-container">
+					<div class="menu-head">
+						<h1 class="heading">
+							Nos
+							<span>Plats !</span>
+						</h1>
+						<p>Vous trouverez ci dessous nos différents plats classés en différentes catégories !</p>
+					</div>
+
+					<div class="menu-btns">
+						<button type="button" class="menu-btn active-btn" id="hamburger">Hamburgers</button>
+						<button type="button" class="menu-btn" id="pizza">Pizzas</button>
+						<button type="button" class="menu-btn" id="salade">Salades</button>
+						<button type="button" class="menu-btn" id="frite">Frites</button>
+						<button type="button" class="menu-btn" id="boisson">Boissons</button>
+						<button type="button" class="menu-btn" id="vegetarien">Vegetarien</button>
+					</div>
+
+					<div
+						class="food-items">
+
+						<!-- item hamburger-->
+
+						<div class="food-item hamburger" id="hamburger">
+							<div class="food-img">
+								<img src="foods/burger/hamburger.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Hamburger</h2>
+								<div class="line"></div>
+								<h3 class="food-price">5.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart1">ommander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item hamburger-->
+
+						<div class="food-item hamburger">
+							<div class="food-img">
+								<img src="foods/burger/cheeseburger.jpeg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Cheese burger</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart2">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item hamburger-->
+
+						<div class="food-item hamburger">
+							<div class="food-img">
+								<img src="foods/burger/doublecheeseburger.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Double cheese burger</h2>
+								<div class="line"></div>
+								<h3 class="food-price">7.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart3">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item hamburger-->
+
+						<div class="food-item hamburger">
+							<div class="food-img">
+								<img src="foods/burger/fishburger.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Fish burger</h2>
+								<div class="line"></div>
+								<h3 class="food-price">5.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart4">CCommander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item hamburger-->
+
+						<div class="food-item hamburger">
+							<div class="food-img">
+								<img src="foods/burger/vegetal.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Burger vegetal</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart5">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item hamburger-->
+
+						<div class="food-item hamburger">
+							<div class="food-img">
+								<img src="foods/burger/burgerpatate.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Patatoes burger</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart6">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item pizza">
+							<div class="food-img">
+								<img src="foods/pizza/fromage.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">4 fromages</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>chevre, mozzarella, bleu, comté</span>
+								</p>
+								<a class="btn add-cart cart7">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item pizza">
+							<div class="food-img">
+								<img src="foods/pizza/savoyarde.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Savoyarde</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>patate, raclette, saucisse, creme</span>
+								</p>
+								<a class="btn add-cart cart8">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item pizza">
+							<div class="food-img">
+								<img src="foods/pizza/poulet.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Poulet</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>poulet, creme, curry</span>
+								</p>
+								<a class="btn add-cart cart9">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item pizza">
+							<div class="food-img">
+								<img src="foods/pizza/reine.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Reine</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>tomate, mozzarella, jambon, champignon</span>
+								</p>
+								<a class="btn add-cart cart10">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item pizza">
+							<div class="food-img">
+								<img src="foods/pizza/courgette.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">courgette mozzarella</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>courgette, mozzarella, sauce tomate</span>
+								</p>
+								<a class="btn add-cart cart11">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item pizza">
+							<div class="food-img">
+								<img src="foods/pizza/poivron.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">poivron brocoli</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>poivron, brocoli, oeuf, gruyere, champignon, creme fraiche</span>
+								</p>
+								<a class="btn add-cart cart12">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+						<div class="food-item salade">
+							<div class="food-img">
+								<img src="foods/salade/salade-vosgienne.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Salade vosgienne</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>salade, patate, lardon, oeuf, tomate, crouton, sauce a base de crème</span>
+								</p>
+								<a class="btn add-cart cart13">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+
+						<div class="food-item salade">
+							<div class="food-img">
+								<img src="foods/salade/salade_tomate.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Salade de tomates</h2>
+								<div class="line"></div>
+								<h3 class="food-price">4.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>salade, tomate, oeuf, mozzarella</span>
+								</p>
+								<a class="btn add-cart cart14">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+						<div class="food-item salade">
+							<div class="food-img">
+								<img src="foods/salade/salade-de-thon.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Salade de thon</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>thon, oeuf, olive</span>
+								</p>
+								<a class="btn add-cart cart15">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+						<div class="food-item salade">
+							<div class="food-img">
+								<img src="foods/salade/salade-de-riz-leger-au-thon.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Salade de riz</h2>
+								<div class="line"></div>
+								<h3 class="food-price">5.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>riz, thon, maïs</span>
+								</p>
+								<a class="btn add-cart cart16">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+
+						<div class="food-item salade">
+							<div class="food-img">
+								<img src="foods/salade/salade_escargot.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Salade salade ^^</h2>
+								<div class="line"></div>
+								<h3 class="food-price">2 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>simples feuilles de salade avec son escargot</span>
+								</p>
+								<a class="btn add-cart cart17">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+
+						<div class="food-item salade">
+							<div class="food-img">
+								<img src="foods/salade/salade_piemontaise.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">salade de piemontaise</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €
+								</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>patate, jambon, oeuf, cornichon, tomate</span>
+								</p>
+								<a class="btn add-cart cart18">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item frite-->
+
+						<div class="food-item frite">
+							<div class="food-img">
+								<img src="foods/frite/frite.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Petite frite</h2>
+								<div class="line"></div>
+								<h3 class="food-price">1.50 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart19">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item  frite -->
+						<div class="food-item frite">
+							<div class="food-img">
+								<img src="foods/frite/frite.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Moyenne frite</h2>
+								<div class="line"></div>
+								<h3 class="food-price">2.50 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart20">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item frite -->
+
+						<div class="food-item frite">
+							<div class="food-img">
+								<img src="foods/frite/frite.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Grande frite</h2>
+								<div class="line"></div>
+								<h3 class="food-price">3.50 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart21">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item boisson-->
+
+						<div class="food-item boisson">
+							<div class="food-img">
+								<img src="foods/boisson/chocolat_chaud.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Chocolat chaud</h2>
+								<div class="line"></div>
+								<h3 class="food-price">1.50 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart22">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item boisson -->
+
+						<div class="food-item boisson">
+							<div class="food-img">
+								<img src="foods/boisson/café.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Café</h2>
+								<div class="line"></div>
+								<h3 class="food-price">1.50 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart23">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item boisson -->
+
+						<div class="food-item boisson">
+							<div class="food-img">
+								<img src="foods/boisson/coca.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Coca cola</h2>
+								<div class="line"></div>
+								<h3 class="food-price">1.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart24">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item boisson -->
+
+						<div class="food-item boisson">
+							<div class="food-img">
+								<img src="foods/boisson/orangina.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Orangina</h2>
+								<div class="line"></div>
+								<h3 class="food-price">1.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart25">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item boisson -->
+
+						<div class="food-item boisson">
+							<div class="food-img">
+								<img src="foods/boisson/ice_tea.png" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Ice tea</h2>
+								<div class="line"></div>
+								<h3 class="food-price">1.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart26">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item boisson-->
+
+						<div class="food-item boisson">
+							<div class="food-img">
+								<img src="foods/boisson/oasis.png" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Oasis</h2>
+								<div class="line"></div>
+								<h3 class="food-price">1.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>New Arrivals</span>
+								</p>
+								<a class="btn add-cart cart27">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item hamburger-->
+
+						<div class="food-item vegetarien">
+							<div class="food-img">
+								<img src="foods/burger/vegetal.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Burger vegetal</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart5">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item hamburger-->
+
+						<div class="food-item vegetarien">
+							<div class="food-img">
+								<img src="foods/burger/burgerpatate.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Patatoes burger</h2>
+								<div class="line"></div>
+								<h3 class="food-price">6.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>Featured</span>
+								</p>
+								<a class="btn add-cart cart6">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item vegetarien">
+							<div class="food-img">
+								<img src="foods/pizza/fromage.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">4 fromages</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>chevre, mozzarella, bleu, comté</span>
+								</p>
+								<a class="btn add-cart cart7">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item vegetarien">
+							<div class="food-img">
+								<img src="foods/pizza/courgette.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">courgette mozzarella</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>courgette, mozzarella, sauce tomate</span>
+								</p>
+								<a class="btn add-cart cart11">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item pizza -->
+
+						<div class="food-item vegetarien">
+							<div class="food-img">
+								<img src="foods/pizza/poivron.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">poivron brocoli</h2>
+								<div class="line"></div>
+								<h3 class="food-price">9.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>poivron, brocoli, oeuf, gruyere, champignon, creme fraiche</span>
+								</p>
+								<a class="btn add-cart cart12">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+
+						<div class="food-item vegetarien">
+
+							<div class="food-img">
+								<img src="foods/salade/salade_tomate.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Salade de tomates</h2>
+								<div class="line"></div>
+								<h3 class="food-price">4.00 €</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>salade, tomate, oeuf, mozzarella</span>
+								</p>
+								<a class="btn add-cart cart14">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+						<!-- item salade -->
+
+						<div class="food-item vegetarien">
+							<div class="food-img">
+								<img src="foods/salade/salade_escargot.jpg" alt="food image">
+							</div>
+							<div class="food-content">
+								<h2 class="food-name">Salade salade ^^</h2>
+								<div class="line"></div>
+								<h3 class="food-price">$14.00</h3>
+								<ul class="rating">
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="fas fa-star"></i>
+									</li>
+									<li>
+										<i class="far fa-star"></i>
+									</li>
+								</ul>
+								<p class="category">Ingrédients:
+									<span>simples feuilles de salade avec son escargot</span>
+								</p>
+								<a class="btn add-cart cart17">Commander</a>
+							</div>
+						</div>
+						<!-- end of item -->
+
+					</div>
 				</div>
+			</section>
 
-			</div>
-			<div class="box">
-				<span class="price">6€</span>
-				<img src="{{ asset('build/images/salade/salade_piemontaise.jpg') }}" alt="">
-				<h3>Salade piemontaise</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
-				</div>
 
-			</div>
-			<div class="box">
-				<span class="price">
-					5€</span>
-				<img src="{{ asset('build/images/burger/hamburger.jpg') }}" alt="">
-				<h3>hamburger</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
-				</div>
+			<!-- section carte achat end -->
 
-			</div>
+			<!-- steps section starts  -->
 
-			<div class="box">
-				<span class="price">2€</span>
-				<img src="{{ asset('build/images/frite/frite.jpg') }}" alt="">
-				<h3>Moyenne Frite</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
-				</div>
+			<div class="step-container">
 
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- popular section ends -->
-
-	<!-- section carte achat start -->
-
-	<section class="menu" id="card_menu">
-		<div class="menu-container">
-			<div class="menu-head">
-				<h1 class="heading">
-					Nos
-					<span>Plats !</span>
+				<h1 class="heading">le
+					<span>fonctionnement</span>
 				</h1>
-				<p>Vous trouverez ci dessous nos différents plats classés en différentes catégories !</p>
+
+				<section class="steps">
+
+					<div class="box">
+						<img src="{{ asset('build/images/step-1.jpg') }}" alt="">
+						<h3>choisissez votre plat</h3>
+					</div>
+					<div class="box">
+						<img src="{{ asset('build/images/step-3.jpg') }}" alt="">
+						<h3>Methode de paiement facile</h3>
+					</div>
+					<div class="box">
+						<img src="{{ asset('build/images/step-4.jpg') }}" alt="">
+						<h3>Appréciez votre nourriture !</h3>
+					</div>
+
+				</section>
+
 			</div>
 
-			<div class="menu-btns">
-				<button type="button" class="menu-btn active-btn" id="hamburger">Hamburgers</button>
-				<button type="button" class="menu-btn" id="pizza">pizzas</button>
-				<button type="button" class="menu-btn" id="salade">Salades</button>
-				<button type="button" class="menu-btn" id="frite">Frites</button>
-				<button type="button" class="menu-btn" id="boisson">Boissons</button>
-				<button type="button" class="menu-btn" id="vegetarien">Vegetarien</button>
-			</div>
-
-			<div
-				class="food-items">
-
-				<!-- item hamburger-->
-
-				<div class="food-item hamburger" id="hamburger">
-					<div class="food-img">
-						<img src="foods/burger/hamburger.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Hamburger</h2>
-						<div class="line"></div>
-						<h3 class="food-price">5.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart1">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item hamburger-->
-
-				<div class="food-item hamburger">
-					<div class="food-img">
-						<img src="foods/burger/cheeseburger.jpeg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Cheese burger</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart2">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item hamburger-->
-
-				<div class="food-item hamburger">
-					<div class="food-img">
-						<img src="foods/burger/doublecheeseburger.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Double cheese burger</h2>
-						<div class="line"></div>
-						<h3 class="food-price">7.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart3">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item hamburger-->
-
-				<div class="food-item hamburger">
-					<div class="food-img">
-						<img src="foods/burger/fishburger.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Fish burger</h2>
-						<div class="line"></div>
-						<h3 class="food-price">5.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart4">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item hamburger-->
-
-				<div class="food-item hamburger">
-					<div class="food-img">
-						<img src="foods/burger/vegetal.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Burger vegetal</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart5">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item hamburger-->
-
-				<div class="food-item hamburger">
-					<div class="food-img">
-						<img src="foods/burger/burgerpatate.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Patatoes burger</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart6">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item pizza">
-					<div class="food-img">
-						<img src="foods/pizza/fromage.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">4 fromages</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>chevre, mozzarella, bleu, comté</span>
-						</p>
-						<a class="btn add-cart cart7">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item pizza">
-					<div class="food-img">
-						<img src="foods/pizza/savoyarde.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Savoyarde</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>patate, raclette, saucisse, creme</span>
-						</p>
-						<a class="btn add-cart cart8">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item pizza">
-					<div class="food-img">
-						<img src="foods/pizza/poulet.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Poulet</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>poulet, creme, curry</span>
-						</p>
-						<a class="btn add-cart cart9">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item pizza">
-					<div class="food-img">
-						<img src="foods/pizza/reine.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Reine</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>tomate, mozzarella, jambon, champignon</span>
-						</p>
-						<a class="btn add-cart cart10">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item pizza">
-					<div class="food-img">
-						<img src="foods/pizza/courgette.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">courgette mozzarella</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>courgette, mozzarella, sauce tomate</span>
-						</p>
-						<a class="btn add-cart cart11">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item pizza">
-					<div class="food-img">
-						<img src="foods/pizza/poivron.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">poivron brocoli</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>poivron, brocoli, oeuf, gruyere, champignon, creme fraiche</span>
-						</p>
-						<a class="btn add-cart cart12">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-				<div class="food-item salade">
-					<div class="food-img">
-						<img src="foods/salade/salade-vosgienne.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Salade vosgienne</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>salade, patate, lardon, oeuf, tomate, crouton, sauce a base de crème</span>
-						</p>
-						<a class="btn add-cart cart13">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-
-				<div class="food-item salade">
-					<div class="food-img">
-						<img src="foods/salade/salade_tomate.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Salade de tomates</h2>
-						<div class="line"></div>
-						<h3 class="food-price">4.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>salade, tomate, oeuf, mozzarella</span>
-						</p>
-						<a class="btn add-cart cart14">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-				<div class="food-item salade">
-					<div class="food-img">
-						<img src="foods/salade/salade-de-thon.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Salade de thon</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>thon, oeuf, olive</span>
-						</p>
-						<a class="btn add-cart cart15">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-				<div class="food-item salade">
-					<div class="food-img">
-						<img src="foods/salade/salade-de-riz-leger-au-thon.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Salade de riz</h2>
-						<div class="line"></div>
-						<h3 class="food-price">5.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>riz, thon, maïs</span>
-						</p>
-						<a class="btn add-cart cart16">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-
-				<div class="food-item salade">
-					<div class="food-img">
-						<img src="foods/salade/salade_escargot.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Salade salade ^^</h2>
-						<div class="line"></div>
-						<h3 class="food-price">2 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>simples feuilles de salade avec son escargot</span>
-						</p>
-						<a class="btn add-cart cart17">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-
-				<div class="food-item salade">
-					<div class="food-img">
-						<img src="foods/salade/salade_piemontaise.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">salade de piemontaise</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €
-						</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>patate, jambon, oeuf, cornichon, tomate</span>
-						</p>
-						<a class="btn add-cart cart18">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item frite-->
-
-				<div class="food-item frite">
-					<div class="food-img">
-						<img src="foods/frite/frite.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Petite frite</h2>
-						<div class="line"></div>
-						<h3 class="food-price">1.50 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart19">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item  frite -->
-				<div class="food-item frite">
-					<div class="food-img">
-						<img src="foods/frite/frite.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Moyenne frite</h2>
-						<div class="line"></div>
-						<h3 class="food-price">2.50 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart20">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item frite -->
-
-				<div class="food-item frite">
-					<div class="food-img">
-						<img src="foods/frite/frite.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Grande frite</h2>
-						<div class="line"></div>
-						<h3 class="food-price">3.50 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart21">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item boisson-->
-
-				<div class="food-item boisson">
-					<div class="food-img">
-						<img src="foods/boisson/chocolat_chaud.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Chocolat chaud</h2>
-						<div class="line"></div>
-						<h3 class="food-price">1.50 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart22">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item boisson -->
-
-				<div class="food-item boisson">
-					<div class="food-img">
-						<img src="foods/boisson/café.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Café</h2>
-						<div class="line"></div>
-						<h3 class="food-price">1.50 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart23">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item boisson -->
-
-				<div class="food-item boisson">
-					<div class="food-img">
-						<img src="foods/boisson/coca.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Coca cola</h2>
-						<div class="line"></div>
-						<h3 class="food-price">1.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart24">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item boisson -->
-
-				<div class="food-item boisson">
-					<div class="food-img">
-						<img src="foods/boisson/orangina.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Orangina</h2>
-						<div class="line"></div>
-						<h3 class="food-price">1.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart25">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item boisson -->
-
-				<div class="food-item boisson">
-					<div class="food-img">
-						<img src="foods/boisson/ice_tea.png" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Ice tea</h2>
-						<div class="line"></div>
-						<h3 class="food-price">1.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart26">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item boisson-->
-
-				<div class="food-item boisson">
-					<div class="food-img">
-						<img src="foods/boisson/oasis.png" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Oasis</h2>
-						<div class="line"></div>
-						<h3 class="food-price">1.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>New Arrivals</span>
-						</p>
-						<a class="btn add-cart cart27">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item hamburger-->
-
-				<div class="food-item vegetarien">
-					<div class="food-img">
-						<img src="foods/burger/vegetal.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Burger vegetal</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart5">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item hamburger-->
-
-				<div class="food-item vegetarien">
-					<div class="food-img">
-						<img src="foods/burger/burgerpatate.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Patatoes burger</h2>
-						<div class="line"></div>
-						<h3 class="food-price">6.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>Featured</span>
-						</p>
-						<a class="btn add-cart cart6">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item vegetarien">
-					<div class="food-img">
-						<img src="foods/pizza/fromage.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">4 fromages</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>chevre, mozzarella, bleu, comté</span>
-						</p>
-						<a class="btn add-cart cart7">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item vegetarien">
-					<div class="food-img">
-						<img src="foods/pizza/courgette.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">courgette mozzarella</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>courgette, mozzarella, sauce tomate</span>
-						</p>
-						<a class="btn add-cart cart11">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item pizza -->
-
-				<div class="food-item vegetarien">
-					<div class="food-img">
-						<img src="foods/pizza/poivron.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">poivron brocoli</h2>
-						<div class="line"></div>
-						<h3 class="food-price">9.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>poivron, brocoli, oeuf, gruyere, champignon, creme fraiche</span>
-						</p>
-						<a class="btn add-cart cart12">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-
-				<div class="food-item vegetarien">
-
-					<div class="food-img">
-						<img src="foods/salade/salade_tomate.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Salade de tomates</h2>
-						<div class="line"></div>
-						<h3 class="food-price">4.00 €</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>salade, tomate, oeuf, mozzarella</span>
-						</p>
-						<a class="btn add-cart cart14">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-				<!-- item salade -->
-
-				<div class="food-item vegetarien">
-					<div class="food-img">
-						<img src="foods/salade/salade_escargot.jpg" alt="food image">
-					</div>
-					<div class="food-content">
-						<h2 class="food-name">Salade salade ^^</h2>
-						<div class="line"></div>
-						<h3 class="food-price">$14.00</h3>
-						<ul class="rating">
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="fas fa-star"></i>
-							</li>
-							<li>
-								<i class="far fa-star"></i>
-							</li>
-						</ul>
-						<p class="category">Ingrédients:
-							<span>simples feuilles de salade avec son escargot</span>
-						</p>
-						<a class="btn add-cart cart17">commander</a>
-					</div>
-				</div>
-				<!-- end of item -->
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- section carte achat end -->
-
-	<!-- steps section starts  -->
-
-	<div class="step-container">
-
-		<h1 class="heading">le
-			<span>fonctionnement</span>
-		</h1>
-
-		<section class="steps">
-
-			<div class="box">
-				<img src="{{ asset('build/images/step-1.jpg') }}" alt="">
-				<h3>choisissez votre plat</h3>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/step-3.jpg') }}" alt="">
-				<h3>Methode de paiement facile</h3>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/step-4.jpg') }}" alt="">
-				<h3>Appréciez votre nourriture !</h3>
-			</div>
-
-		</section>
-
-	</div>
-
-	<!-- steps section ends -->
-
-	<!-- gallery section starts  -->
-
-	<section class="gallery" id="gallery">
-
-		<h1 class="heading">
-			notre
-			<span>
-				galerie
-			</span>
-		</h1>
-
-		<div class="box-container">
-
-			<div class="box">
-				<img src="{{ asset('build/images/burger/hamburger.jpg') }}" alt="">
-				<div class="content">
-					<h3>Hamburger</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/pizza/savoyarde.jpg') }}" alt="">
-				<div class="content">
-					<h3>Savoyarde</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/pizza/reine.jpg') }}" alt="">
-				<div class="content">
-					<h3>Reine</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/burger/doublecheeseburger.jpg') }}" alt="">
-				<div class="content">
-					<h3>Double cheese burger</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/boisson/coca.jpg') }}" alt="">
-				<div class="content">
-					<h3>coca-cola</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/salade/salade-vosgienne.jpg') }}" alt="">
-				<div class="content">
-					<h3>Salade vosgienne</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/salade/salade-de-thon.jpg') }}" alt="">
-				<div class="content">
-					<h3>Salade de thon</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/frite/frite.jpg') }}" alt="">
-				<div class="content">
-					<h3>Frites</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/burger/vegetal.jpg') }}" alt="">
-				<div class="content">
-					<h3>Burger veggie</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
-
-				</div>
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- gallery section ends -->
-
-	<!-- review section starts  -->
-
-	<section class="review" id="review">
-
-		<h1 class="heading">
-			vos
-			<span>avis</span>
-			comptent pour nous !
-		</h1>
-
-		<div class="box-container">
-
-			<div class="box">
-				<img src="{{ asset('build/images/pic1.png') }}" alt="">
-				<h3>john deo</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
-				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/pic2.png') }}" alt="">
-				<h3>john deo</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
-				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
-			</div>
-			<div class="box">
-				<img src="{{ asset('build/images/pic3.png') }}" alt="">
-				<h3>john deo</h3>
-				<div class="stars">
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="far fa-star"></i>
-				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- review section ends -->
-
-	<!-- scroll top button  -->
-	<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
-
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>{% endblock %}
+			<!-- steps section ends -->
+
+			<!-- scroll top button  -->
+			<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+			<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+			<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		</body>
+	{% endblock %}

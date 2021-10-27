@@ -22,7 +22,6 @@
 						<tr>
 							<td>{{ product.name }}</td>
 							<td>{{ product.price }}</td>
-							<td>{{ product.category }}</td>
 							<td>{{ product.ingredient }}</td>
 							<td>
 								<a href="{{ path('admin_edit_product', {id: product.id}) }}" class="btn">Editer</a>
@@ -34,6 +33,7 @@
 			<div class="text-right">
 				<a href="{{ path('admin_new_product') }}" class="btn">Créer un produit</a>
 			</div>
+			
 		</diV>
 	</section>
 {% endblock %}
