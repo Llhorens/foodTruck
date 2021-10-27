@@ -69,6 +69,7 @@ class ManageProductController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->persist($product);
             $this->em->flush();
             return $this->redirectToRoute('admin_manage_product');
         }
@@ -76,5 +77,18 @@ class ManageProductController extends AbstractController
             'product' => $product,
             'form' => $form->createView()
         ]);
+    }
+    /**
+     * @Route("/manageproduct/{id}", name="admin_delete_product")
+     * @param Product $product
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function deleteProduct(Product $product, Request $request)
+    {
+        if ($this->isCsrfTokenValid('delete' . $product->getId(), $request->get('_token'))) {
+            $this->em->remove($product);
+            $this->em->flush();
+        }
+        return $this->redirectToRoute('admin_manage_product');
     }
 }

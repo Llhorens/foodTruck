@@ -26,6 +26,11 @@
 							<td>{{ product.ingredient }}</td>
 							<td>
 								<a href="{{ path('admin_edit_product', {id: product.id}) }}" class="btn">Editer</a>
+								<form method="post" action="{{ path('admin_delete_product', {id: product.id}) }}">
+									<input type="hidden" name="_method" value="DELETE">
+									<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ product.id) }}">
+									<button class="btn">Supprimer</button>
+								</form>
 							</td>
 						</tr>
 					{% endfor %}
