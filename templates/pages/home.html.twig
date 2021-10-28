@@ -50,7 +50,9 @@
 
 									<div class="food-item hamburger">
 										<div class="food-img">
-											<img src="{{product.filename}}" alt="food image">
+											{% if product.filename %}
+												<img src="/images/products/{{ product.filename }}" alt="food image">
+											{% endif %}
 										</div>
 										<div class="food-content">
 											<h2 class="food-name">{{ product.name }}</h2>

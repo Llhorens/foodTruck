@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
@@ -35,6 +36,7 @@ class Product
      * @Vich\UploadableField(mapping="property_image", fileNameProperty="filename")
      */
     private $imageFile;
+
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -54,6 +56,11 @@ class Product
      * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="products")
      */
     private $category;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updated_at;
 
 
     public function __construct()
@@ -129,6 +136,9 @@ class Product
     public function setImageFile(?File $imageFile): Product
     {
         $this->imageFile = $imageFile;
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
         return $this;
     }
 
@@ -153,6 +163,18 @@ class Product
     public function removeCategory(Category $category): self
     {
         $this->category->removeElement($category);
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    {
+        $this->updated_at = $updated_at;
 
         return $this;
     }
