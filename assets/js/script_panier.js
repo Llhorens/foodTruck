@@ -2,45 +2,6 @@ export * from './script_panier'
 
 let carts = document.querySelectorAll('.add-cart');
 
-let products = [
-    {
-        name: "hamburger",
-        tag: "hamburger",
-        price: 5,
-        inCart: 0
-    },
-    {
-        name: "cheese burger",
-        tag: "cheeseburger",
-        price: 6,
-        inCart: 0
-    },
-    {
-        name: "double cheese burger",
-        tag: "doublecheeseburger",
-        price: 7,
-        inCart: 0
-    },
-    {
-        name: "fish burger",
-        tag: "fishburger",
-        price: 5,
-        inCart: 0
-    },
-    {
-        name: "burger vegetal",
-        tag: "burger vegetal",
-        price: 6,
-        inCart: 0
-    },
-    {
-        name: "patatoes burger",
-        tag: "burgerpatate",
-        price: 6,
-        inCart: 0
-    }
-    
-];
 
 
 for(let i=0; i< carts.length; i++) {
