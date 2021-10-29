@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\OrderProductRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -26,7 +24,8 @@ class OrderProduct
     private $product;
 
     /**
-     * @ORM\OneToMany(targetEntity=Order::class, mappedBy="orderProduct", orphanRemoval=true)
+     * @ORM\ManyToOne(targetEntity=Order::class, inversedBy="orderProducts")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $command;
 
@@ -34,11 +33,6 @@ class OrderProduct
      * @ORM\Column(type="integer")
      */
     private $quantity;
-
-    public function __construct()
-    {
-        $this->command = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -57,32 +51,14 @@ class OrderProduct
         return $this;
     }
 
-    /**
-     * @return Collection|Order[]
-     */
-    public function getCommand(): Collection
+    public function getCommand(): ?Order
     {
         return $this->command;
     }
 
-    public function addCommand(Order $command): self
+    public function setCommand(?Order $command): self
     {
-        if (!$this->command->contains($command)) {
-            $this->command[] = $command;
-            $command->setOrderProduct($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCommand(Order $command): self
-    {
-        if ($this->command->removeElement($command)) {
-            // set the owning side to null (unless already changed)
-            if ($command->getOrderProduct() === $this) {
-                $command->setOrderProduct(null);
-            }
-        }
+        $this->command = $command;
 
         return $this;
     }

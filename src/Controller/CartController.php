@@ -1,4 +1,4 @@
-<?php   
+<?php
 
 namespace App\Controller;
 
@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CartController extends AbstractController
 {
+
     /**
      * @Route("/cart", name="cart")
      */
