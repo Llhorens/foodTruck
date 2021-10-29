@@ -1,0 +1,32 @@
+#product{
+    font-size: 2rem;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 4vh;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div{
+    padding-bottom: 1em;
+}
+input#product_name, input#product_price,
+ input#product_category, input#product_picture,
+ textarea#product_ingredient{
+    font-size: 2.5rem;
+    background-color: rgb(235, 235, 235);
+    float: right;
+    border: solid 1px red;
+    
+}
+textarea#product_ingredient{
+    height: 150px;
+}
+.border{
+    text-align: center;
+    padding-bottom: 5rem;
+    width: 100%;
+}
