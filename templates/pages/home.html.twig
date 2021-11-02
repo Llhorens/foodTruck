@@ -26,28 +26,26 @@
 	<!-- section carte achat start -->
 
 	<section class="menu" id="card_menu">
-		<div class="menu-container">
-			<div class="menu-head">
+		
+		<div class="menu-head">
 				<h1 class="heading">
 					Nos
 					<span>Plats !</span>
 				</h1>
 				<p>Vous trouverez ci dessous nos différents plats classés en différentes catégories !</p>
 			</div>
+			
+		<div class="menu-container">
+			
 
-			<div class="menu-btns">
+          
 				{% for categorie in category %}
 					<h3 class="heading">{{ categorie.name }}</h3>
 					{% for product in products %}
 						{% for option in product.category %}
-
-
 							{% if option.name == categorie.name %}
-								<div
-									class="food-items">
 
-									<!-- item hamburger-->
-
+						<div class="food-items">
 									<div class="food-item hamburger">
 										<div class="food-img">
 											<img src="{{product.filename}}" alt="food image">
@@ -60,18 +58,27 @@
 											<p class="category">Ingrédients:
 												<span>{{ product.ingredient }}</span>
 											</p>
-											<a class="btn add-cart cart1">commander</a>
+										
+											<div class="quantity2" data-tag='${item.tag}'>
+													<p>Quantité:</p>
+												<button class="btns minus-btn" type="button">-</button>
+													<input type="text" class="quantitie" id="quantity" value="1" min="1">
+												<button class="btns plus-btn" type="button">+</button>
+											</div>
+										
+										
+											<a class="btn add-cart cart1">Ajouter au panier</a>
 										</div>
 									</div>
+								
+						</div>
 								{% endif %}
 							{% endfor %}
 						{% endfor %}
 						<!-- end of item -->
-					</div>
+					
 				{% endfor %}
-
-
-			</div>
+						
 		</div>
 	</section>
 

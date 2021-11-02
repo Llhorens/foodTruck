@@ -31,4 +31,39 @@
   .btn:hover{
     color:#fff;
   }
+
+  .quantity2 {
+    display: flex;
+    margin-top: 2vh;
+  }
+  .quantity2 p{
+    font-size: 2rem;
+    padding-right: 15px;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .quantity2 button{
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    
+  }
   
+  
+  .quantity2 input {
+    border-bottom: 1px solid red;
+    text-align: center;
+    width: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
+  }
+  .quantity2 .btns{
+    cursor: pointer;
+  }
