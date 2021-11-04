@@ -2,11 +2,18 @@
         font-size: 2.5rem;
         text-align: center;
         padding-top: 5%;
+        flex-direction: column;
+        display: flex;
 }
 input#inputEmail, input#inputPassword{
     margin-left: 10px;
     font-size: 2rem;
     background-color: lightgray;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-lg{
@@ -24,3 +31,15 @@ input#inputEmail, input#inputPassword{
     margin-bottom: 5%;
 }
 
+@media all and (max-width: 600px){
+
+    input#inputEmail, input#inputPassword{
+        width: 80%;
+    }
+}
+@media all and (min-width:1000px){
+
+    input#inputEmail, input#inputPassword{
+        width: 30%;
+    }
+}
