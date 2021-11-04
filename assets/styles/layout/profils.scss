@@ -1,50 +1,47 @@
-.page_profils{
-    margin-top: 15vh;
+.page_profils {
+  margin-top: 15vh;
 }
-.profils{
-    display: flex;
-    height: 400px;
-    margin-top: 5%;
+.profils {
+  display: flex;
+  height: 400px;
+  margin-top: 5%;
 }
-.un{
-    font-size: 1.5rem;
+.un {
+  font-size: 1.5rem;
 }
-.img_profils{
-    width: 30%;
-    text-align: center;
-    flex-direction: column;
-    
+.img_profils {
+  width: 30%;
+  text-align: center;
+  flex-direction: column;
 }
-.img_profils img{
-    width: 50%;
-    border-radius: 50%;
-    margin: auto;
-   
-    
+.img_profils img {
+  width: 50%;
+  border-radius: 50%;
+  margin: auto;
 }
-.profils_name{
-    width: 70%;
-    text-align: center; 
+.profils_name {
+  width: 70%;
+  text-align: center;
 }
-.profils_name .heading{
-    font-size: 2rem;
+.profils_name .heading {
+  font-size: 2rem;
 }
-.mb-3{
-    font-size: 2rem;
+.mb-3 {
+  font-size: 2rem;
 }
-.border{
-    border: solid 2px lightgray;
-    border-radius: 10px;
-    padding-top: 5%;
-    margin-bottom: 15%;
+.border {
+  border: solid 2px lightgray;
+  border-radius: 10px;
+  padding-top: 5%;
+  margin-bottom: 15%;
 }
-.liste_commande{
-    font-size: 1.5rem;
+.liste_commande {
+  font-size: 1.5rem;
 }
 
-.les_trois_boutons{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15%;
-    flex-wrap: wrap;
+.les_trois_boutons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15%;
+  flex-wrap: wrap;
 }

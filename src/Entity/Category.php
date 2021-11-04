@@ -31,7 +31,6 @@ class Category
 
     public function __construct()
     {
-        $this->Category = new ArrayCollection();
         $this->products = new ArrayCollection();
     }
 
@@ -64,6 +63,7 @@ class Category
     {
         if (!$this->products->contains($product)) {
             $this->products[] = $product;
+            $product->setCategory($this);
         }
 
         return $this;

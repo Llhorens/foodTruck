@@ -19,59 +19,51 @@
 	<body>
 		<header>
 			<a href="{{ path('home') }}" class="logo">
-				<i class="fas fa-utensils"></i>DAQ 2.0 Food Truck</a>
-			<div id="menu-bar" class="fas fa-bars"></div>
+				<i class="fas fa-utensils"></i>food</a>
+			<i class="fas fa-utensils"></i>DAQ 2.0 Food Truck</a>
+		<div id="menu-bar" class="fas fa-bars"></div>
 
-			<nav class="navbar">
-				<a href="{{ path('home') }}">Accueil</a>
-				<a href="#card_menu">Notre carte</a>
-				<a class="cart" href="{{ path('cart') }}">
-					<ion-icon name="basket"></ion-icon>Panier
-					<span>0</span>
-				</a>.
-				{% if app.user %}
-					{% if not is_granted('ROLE_ADMIN') %}
-						<a class="login" href="{{ path('user_profile') }}">Profil</a>
-					{% endif %}
-					{% if is_granted('ROLE_ADMIN') %}
-						<a class="login" href="{{ path('admin_profile') }}">Admin</a>
-					{% endif %}
-					<a class="register" href="{{ path('app_logout') }}">Deconnexion</a>
-
-				{% else %}
-					<a class="login" href="{{ path('app_login') }}">Connexion</a>
-					<a class="register" href="{{ path('app_register') }}">S'enregistrer</a>
+		<nav class="navbar">
+			<a href="{{ path('home') }}">Accueil</a>
+			<a href="#speciality">Specialités</a>
+			<a href="#popular">Populaire</a>
+			<a href="#card_menu">La carte</a>
+			<a href="#gallery">Galerie</a>
+			<a href="#review">Avis</a>
+			<a href="#card_menu">Notre carte</a>
+			<a class="cart" href="{{ path('cart') }}">
+				<ion-icon name="basket"></ion-icon>Panier
+				<span>0</span>
+			</a>.
+			{% if app.user %}
+				{% if not is_granted('ROLE_ADMIN') %}
+					<a class="login" href="{{ path('user_profile') }}">Profil</a>
 				{% endif %}
+				{% if is_granted('ROLE_ADMIN') %}
+					<a class="login" href="{{ path('admin_profile') }}">Admin</a>
+				{% endif %}
+				<a class="register" href="{{ path('app_logout') }}">Deconnexion</a>
+
+			{% else %}
+				<a class="login" href="{{ path('app_login') }}">Connexion</a>
+				<a class="register" href="{{ path('app_register') }}">S'enregistrer</a>
+			{% endif %}
 
 
-			</nav>
-		</header>
-
-		<!-- header section ends et navbar end aussi ahah -->
-
-		{% block body %}{% endblock %}
-
-		<!-- footer section  -->
-
-		<section class="footer">
-
-			<div class="share">
-				<a href="https://www.facebook.com" class="btn">Facebook</a>
-				<a href="https://twitter.com" class="btn">Twitter</a>
-				<a href="https://www.linkedin.com" class="btn">Linkedin</a>
-			</div>
-
-			<h1 class="credit">
-				© copyright
-				<span>
-					Bigey, Colez, Lhorens
-				</span>
-				| Tout droits reservés
-			</h1>
-
-		</section>
+		</nav>
 	</body>
-	{% block javascripts %}
-		{{ encore_entry_script_tags('app') }}
-	{% endblock %}
-</html>
+</html></header><!-- header section ends et navbar end aussi ahah -->{% block body %}{% endblock %}<!-- footer section  --><section class="footer">
+
+<div class="share">
+	<a href="https://www.facebook.com" class="btn">Facebook</a>
+	<a href="https://twitter.com" class="btn">Twitter</a>
+	<a href="https://www.linkedin.com" class="btn">Linkedin</a>
+</div>
+
+<h1 class="credit">
+	© copyright
+	<span>
+		Bigey, Colez, Lhorens
+	</span>
+	| Tout droits reservés
+</h1></section></body>{% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}</html>

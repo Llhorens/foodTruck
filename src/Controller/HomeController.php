@@ -17,19 +17,16 @@ class HomeController extends AbstractController
      * @var ProductRepository
      */
     private $repository;
-    /**
-     * @var CategoryRepository
-     */
-    private $categoryRepository;
 
     /**
      * @Route("/", name="home")
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return \Symfony\Component_HttpFoundation\Response
      */
-    public function index(ProductRepository $repository, CategoryRepository $categoryRepository)
+    public function index(ProductRepository $repository)
     {
+
         $products = $repository->findAll();
-        $category = $categoryRepository->findAll();
-        return $this->render('pages/home.html.twig', compact('products', 'category'));
+        return $this->render('pages/home.html.twig', compact('products'));
     }
+    
 }

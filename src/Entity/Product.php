@@ -9,7 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
-
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use App\Entity\Category;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
@@ -48,12 +49,7 @@ class Product
     private $price;
 
     /**
-     * @ORM\Column(type="text")
-     */
-    private $ingredient;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="products")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $category;
 
@@ -67,6 +63,12 @@ class Product
     {
         $this->category = new ArrayCollection();
     }
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="products")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $Category;
 
     public function getId(): ?int
     {
