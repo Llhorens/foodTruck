@@ -1,0 +1,126 @@
+.menu-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.menu-head {
+  text-align: center;
+  color: black;
+}
+
+.menu-head h2 {
+  font-family: var(--Kaushan);
+  font-size: 4rem;
+}
+
+.menu-head p {
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 1.8rem 0;
+}
+
+.food-items {
+  margin: 2rem 0;
+  padding-bottom: 5%;
+  max-width: 100%;
+}
+
+.cart_produit {
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  -webkit-box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.75);
+}
+
+.cart_produit .btn {
+  position: relative;
+  float: right;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+.food-name {
+  font-family: var(--Inter);
+  color: red;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.line {
+  width: 100px;
+  height: 3px;
+  background: red;
+}
+
+.food-price {
+  padding: 0.4rem 0;
+  font-weight: 600;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.category {
+  padding-top: 0.2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--Inter);
+}
+
+.category span {
+  font-weight: 500;
+}
+
+.cart_produit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+}
+
+.cart_produit .food-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.food-content {
+  margin-left: 2rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.cart_produit .food-img img {
+  width: 400px;
+  height: 300px;
+}
+
+#menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.food-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=carteAchat.css.map */

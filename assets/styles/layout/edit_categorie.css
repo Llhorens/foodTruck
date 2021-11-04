@@ -1,0 +1,19 @@
+form[name="category"] label {
+  font-size: 2rem;
+  padding-right: 30px;
+}
+
+form[name="category"] input {
+  font-size: 2rem;
+  border: 1px solid black;
+  margin-bottom: 10vh;
+}
+
+form[name="category"] {
+  padding-top: 10vh;
+}
+
+.creer_cat {
+  margin-top: 10vh;
+}
+/*# sourceMappingURL=edit_categorie.css.map */

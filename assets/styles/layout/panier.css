@@ -1,0 +1,125 @@
+.products img {
+  width: 120px;
+  height: 90px;
+  margin-left: 3%;
+}
+
+.product span {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 6%;
+}
+
+.products-container ion-icon {
+  color: blue;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.products-container {
+  max-width: 800px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 10%;
+  font-size: 2rem;
+  min-height: 100%;
+}
+
+.product-header {
+  width: 100%;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-bottom: 2px solid red;
+  margin: 0 auto;
+}
+
+.product-title {
+  width: 45%;
+}
+
+.price {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quantity {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.total {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2%;
+}
+
+.product {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1%;
+  padding-top: 0.5%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.prix_panier_total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.prix_panier_titre {
+  width: 20%;
+}
+
+.prix_total {
+  width: 10%;
+}
+/*# sourceMappingURL=panier.css.map */

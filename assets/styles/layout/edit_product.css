@@ -1,0 +1,114 @@
+.border {
+  width: 100%;
+  max-width: 100%;
+}
+
+.border label {
+  color: red;
+  font-size: 2rem;
+}
+
+.border .pipicaca {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.border input, .border textarea {
+  max-width: 100%;
+}
+
+#product_category {
+  width: 100%;
+}
+
+#product div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#product div:nth-of-type(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#product div:nth-of-type(4) label {
+  margin-bottom: 2rem;
+  border: 1px solid red;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  padding: .8rem 3rem;
+  border: 0.2rem solid var(--red);
+  color: var(--red);
+  cursor: pointer;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+#product div:nth-of-type(4) label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--red);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  z-index: -1;
+}
+
+#product div:nth-of-type(4) label:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+#product div:nth-of-type(4) label:hover {
+  color: #fff;
+}
+
+#product div:nth-of-type(5) label {
+  margin-bottom: 2rem;
+}
+
+#product div:nth-of-type(1) input {
+  margin-bottom: 2rem;
+}
+
+#product div:nth-of-type(5) select {
+  font-size: 2rem;
+}
+
+#product_imageFile {
+  display: none;
+}
+
+#product div input {
+  border-radius: 5px;
+}
+
+#product div textarea {
+  border-radius: 5px;
+}
+
+#product select {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=edit_product.css.map */

@@ -1,0 +1,42 @@
+#product {
+  font-size: 2rem;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 4vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div {
+  padding-bottom: 1em;
+}
+
+input#product_name, input#product_price,
+input#product_category, input#product_picture,
+textarea#product_ingredient {
+  font-size: 2.5rem;
+  background-color: #ebebeb;
+  border: solid 1px red;
+}
+
+textarea#product_ingredient {
+  height: 200px;
+}
+
+.border {
+  text-align: center;
+  padding-bottom: 5rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  #product {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=creatProduct.css.map */

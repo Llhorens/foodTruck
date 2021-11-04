@@ -1,0 +1,11 @@
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
+  color: #666;
+}
+
+.heading span {
+  color: var(--red);
+}
+/*# sourceMappingURL=specialites.css.map */
