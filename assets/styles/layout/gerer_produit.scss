@@ -1,0 +1,32 @@
+.page_profils .border table{
+    width: 100%;
+}
+.page_profils .border table thead{
+    font-size: 2rem;
+    color: red;
+}
+
+.page_profils .border table tbody{
+    font-size: 2rem;
+}
+.bouton{
+    display: flex;
+    justify-content: space-around;
+}
+
+.page_profils .border .profil_title{
+    padding-bottom: 10vh;
+}
+
+.creer_produit{
+    margin-top: 10vh;
+}
+
+.border{
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    
+}

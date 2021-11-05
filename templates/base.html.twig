@@ -7,15 +7,12 @@
 			{% block title %}Food Truck
 			{% endblock %}
 		</title>
-		<<<<<<<HEAD=======>>> {# Run `composer require symfony/webpack-encore-bundle`																																																			           and uncomment the following Encore helpers to start using Symfony UX #} {# Run `composer require symfony/webpack-encore-bundle`
-																																																																						           and uncomment the following Encore helpers to start using Symfony UX #}>>>> d43ed405f467d543b70a05c20bdb44e1bf460ebe
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
-
 
 	</head>
 	<body>
@@ -29,7 +26,7 @@
 				<a href="#card_menu">Notre carte</a>
 				<a class="cart" href="{{ path('cart') }}">
 					<ion-icon name="basket"></ion-icon>Panier
-					<span>0</span>
+					<span>{{ app.session.get('panier')|length }}</span>
 				</a>.
 				{% if app.user %}
 					{% if not is_granted('ROLE_ADMIN') %}

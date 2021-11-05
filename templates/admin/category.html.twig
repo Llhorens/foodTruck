@@ -19,7 +19,7 @@
 						<tr>
 							<td>{{ category.name }}</td>
 							<td>{{ category.id }}</td>
-							<td>
+							<td class="bouton">
 								<a href="{{ path('admin_edit_category', {id: category.id}) }}" class="btn">Editer</a>
 								<form method="post" action="{{ path('admin_delete_category', {id: category.id}) }}">
 									<input type="hidden" name="_method" value="DELETE">
@@ -32,7 +32,7 @@
 				</tbody>
 			</table>
 			<div class="text-right">
-				<a href="{{ path('admin_new_category') }}" class="btn">Créer une catégorie</a>
+				<a href="{{ path('admin_new_category') }}" class="btn creer_cat">Créer une catégorie</a>
 			</div>
 		</diV>
 	</section>

@@ -4,16 +4,82 @@
 
 {% block body %}
 
-<div class="products-container">
-    <div class="product-header">
-        <h5 class="product-title">Produit</h5>
-        <h5 class="price">Prix</h5>
-        <h5 class="quantity">Quantité</h5>
-        <h5 class="total">Prix Total:</h5>
-    </div>
-    <div class="products">
-    
-    </div>
-</div>
+	<div class="products-container">
+		<table>
+			<thead>
+				<div class="product-header">
+					<th>
+						<h5 class="product-title">Produit</h5>
+					</th>
+					<th>
+						<h5 class="price">Prix</h5>
+					</th>
+					<th>
+						<h5 class="quantity">Quantité</h5>
+					</th>
+					<th>
+						<h5 class="total">Prix Total:</h5>
+					</th>
+					<th>
+						<h5>Modifier ma commande<h5></th>
+						</div>
+					</th>
 
-{% endblock %}
+				</thead>
+			</thead>
+			<tbody>
+				<pre>
+			
+			</pre>
+				<div class="products">
+					{% set allTotal = 0  %}
+					{% for commande in commandes %}
+						<tr>
+							<td>{{commande.0.name}}</td>
+							<td>
+								{{commande.0.price}}
+								€
+							</td>
+							<td></td>
+							<td>
+
+								{% set total =  commande.0.price * commande.1 %}
+								{% set allTotal = allTotal + total %}
+
+								<span id="total">{{total}}
+									€
+								</span>
+							</td>
+							<td>
+								<div class="quantity2" data-tag='${item.tag}'>
+									<a href="{{ path ("remove_cart", { id: commande.0.id } )}}" class="btn minus-btn" type="button">-</a>
+									<a href="{{ path ("add_cart", { id: commande.0.id } )}}" class="btn plus-btn" type="button">+</a>
+									<a href="{{ path ("del_cart", { id: commande.0.id } )}}" class="btn plus-btn" type="button">Suppr</a>
+								</div>
+
+
+							</td>
+						</tr>
+
+					</div>
+				</tr>
+				<div>
+				{% endfor %}
+			</tbody>
+
+		</div>
+	</tbody>
+	<tfoot>
+
+		<tr>
+			<td>
+				<h5 class="product-title">Total</h5>
+			</td>
+			<td colspan="3">{{allTotal}}
+				€</td>
+			<td>
+				<a class="btn add-cart cart1" href="{{ path('cart') }}">Commander</a>
+			</td>
+		</tr>
+	</tfoot>
+</table></div>{% endblock %}

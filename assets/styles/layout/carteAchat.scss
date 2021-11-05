@@ -2,6 +2,8 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+ 
+  
 }
 .menu img {
   width: 100%;
@@ -60,11 +62,16 @@
 .active-btn {
   color: green;
 }
+
 .food-items {
   margin: 2rem 0;
   padding-bottom: 5%;
+  max-width: 100%;
+  
+  
 }
 .food-item {
+  
   border-radius: 4px;
   overflow: hidden;
   background: #fff;
