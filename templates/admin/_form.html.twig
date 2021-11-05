@@ -1,4 +1,52 @@
-{{ form_start(form) }}
-{{ form_widget(form) }}
-<Button class="btn">Enregistrer</Button>
-{{ form_end(form )}}
+
+{{ form_start(form , { 'attr': {'class' : 'pipicaca'}}) }}
+{{ form_widget(form)}}
+{# <div class="edit_product_name"> 
+    <div class="name_name">
+         {{ form_label(form.name)}} 
+    </div>
+    <div class="name_input">
+         {{ form_widget(form.name)}} 
+    </div>
+</div>
+
+<div class="edit_product_price">
+    <div class="price_title">
+         {{ form_label(form.price)}} 
+    </div>
+    <div class="price_input">
+         {{ form_widget(form.price)}} 
+    </div>
+</div>
+
+<div class="edit_product_ingredient">
+    <div class="ingredient_title">
+        {{ form_label(form.ingredient)}} 
+    </div>
+    <div class="ingredient_input">
+        {{ form_widget(form.ingredient)}} 
+    </div>
+</div>
+
+<div class="edit_product_img">
+    <div class="img_name">
+         {{ form_label(form.imageFile)}} 
+    </div>
+    <div class="img_choose">
+        {{ form_widget(form.imageFile)}} 
+    </div>
+</div>
+
+<div class="edit_product_category">
+    <div class="category_name">
+        {{ form_label(form.category)}} 
+    </div>
+    <div class="category_form">
+         {{ form_widget(form.category)}} 
+    </div>
+</div>  #}
+
+<div class="button">
+    <Button class="btn">Enregistrer</Button>
+</div> 
+    {{ form_end(form )}}
